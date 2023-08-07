@@ -174,7 +174,7 @@
       "title": "Positive Prompt",
       "properties": {},
       "widgets_values": [
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, 4k, highly detailed"
+        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
       ]
     },
     {
@@ -293,8 +293,8 @@
         0,
         1024,
         1024,
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, 4k, highly detailed",
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, 4k, highly detailed"
+        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
+        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
@@ -478,8 +478,8 @@
         0,
         1024,
         1024,
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, 4k, highly detailed",
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, 4k, highly detailed"
+        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
+        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -563,72 +563,6 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 6,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        527,
-        645
-      ],
-      "size": {
-        "0": 389.90924072265625,
-        "1": 340.3636474609375
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 7
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 8
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 9
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 10
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            12,
-            23
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
-      },
-      "widgets_values": [
-        "enable",
-        894661435332758,
-        "randomize",
-        18,
-        8,
-        "euler",
-        "normal",
-        0,
-        10000,
-        "disable"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 10,
@@ -727,6 +661,99 @@
       "bgcolor": "#355"
     },
     {
+      "id": 15,
+      "type": "PreviewImage",
+      "pos": [
+        66,
+        704
+      ],
+      "size": {
+        "0": 409.272705078125,
+        "1": 367.90826416015625
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 6,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        527,
+        645
+      ],
+      "size": {
+        "0": 389.90924072265625,
+        "1": 340.3636474609375
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 7
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 8
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            12,
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        81099882195007,
+        "randomize",
+        30,
+        15,
+        "euler_ancestral",
+        "normal",
+        0,
+        10000,
+        "disable"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 13,
       "type": "KSamplerAdvanced",
       "pos": [
@@ -779,43 +806,16 @@
       },
       "widgets_values": [
         "enable",
-        279387887359979,
+        125796421640129,
         "randomize",
-        20,
-        8,
-        "euler",
+        31,
+        15,
+        "euler_ancestral",
         "normal",
-        18,
+        30,
         10000,
         "disable"
       ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 15,
-      "type": "PreviewImage",
-      "pos": [
-        66,
-        704
-      ],
-      "size": {
-        "0": 409.272705078125,
-        "1": 367.90826416015625
-      },
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 25
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      },
       "color": "#233",
       "bgcolor": "#355"
     }
