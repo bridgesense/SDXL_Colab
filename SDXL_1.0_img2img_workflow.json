@@ -1,5 +1,5 @@
 {
-  "last_node_id": 22,
+  "last_node_id": 23,
   "last_link_id": 39,
   "nodes": [
     {
@@ -43,7 +43,9 @@
       "properties": {},
       "widgets_values": [
         "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
-      ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 5,
@@ -86,7 +88,9 @@
       "properties": {},
       "widgets_values": [
         "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly"
-      ]
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 8,
@@ -100,7 +104,7 @@
         "1": 99.54532623291016
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -143,7 +147,7 @@
         "1": 390.1817626953125
       },
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -170,7 +174,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -249,7 +253,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -382,7 +386,7 @@
         "1": 367.90826416015625
       },
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -409,7 +413,7 @@
         "1": 346.7269592285156
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -505,85 +509,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 2,
-      "type": "CLIPTextEncodeSDXL",
-      "pos": [
-        527,
-        318
-      ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        },
-        {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 1,
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          },
-          "slot_index": 1
-        },
-        {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 2,
-          "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            31
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        0,
-        0,
-        1024,
-        1024,
-        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
-        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 4,
       "type": "CLIPTextEncodeSDXL",
       "pos": [
@@ -595,7 +520,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -663,60 +588,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        536,
-        172
-      ],
-      "size": {
-        "0": 387.2728271484375,
-        "1": 102.45455932617188
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            33
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            5,
-            6
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            13,
-            29
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_base_1.0.safetensors"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 18,
       "type": "VAEEncode",
       "pos": [
@@ -728,7 +599,7 @@
         "1": 107
       },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -771,7 +642,7 @@
         "1": 329
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -829,12 +700,12 @@
         534,
         1687
       ],
-      "size": [
-        384,
-        130
-      ],
+      "size": {
+        "0": 384,
+        "1": 130
+      },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -878,7 +749,7 @@
         "1": 88.1809310913086
       },
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -917,10 +788,10 @@
         957,
         1797
       ],
-      "size": [
-        385,
-        59
-      ],
+      "size": {
+        "0": 385,
+        "1": 59
+      },
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -943,43 +814,18 @@
       ]
     },
     {
-      "id": 22,
-      "type": "PreviewImage",
-      "pos": [
-        1387,
-        651
-      ],
-      "size": [
-        918,
-        1207
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 39
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
       "id": 21,
       "type": "ImageUpscaleWithModel",
       "pos": [
         957,
         1692
       ],
-      "size": [
-        389,
-        57
-      ],
+      "size": {
+        "0": 389,
+        "1": 57
+      },
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1006,6 +852,187 @@
       ],
       "properties": {
         "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        532,
+        96
+      ],
+      "size": {
+        "0": 387.2728271484375,
+        "1": 102.45455932617188
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            6
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            13,
+            29
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        526,
+        240
+      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 1,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        0,
+        0,
+        1024,
+        1024,
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 23,
+      "type": "Note",
+      "pos": [
+        528,
+        549
+      ],
+      "size": [
+        386.7999961853028,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Increase the 'denoise' value below to get a completely different picture. Experiment!"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 22,
+      "type": "PreviewImage",
+      "pos": [
+        1387,
+        651
+      ],
+      "size": {
+        "0": 918,
+        "1": 1207
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
       }
     }
   ],
