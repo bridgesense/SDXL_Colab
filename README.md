@@ -11,10 +11,10 @@ Welcome to the world of ComfyUI, a paradigm shift in interface design. With its 
 5. **Gateway to ComfyUI**: Launch 'ComfyUI with localtunnel'. The play button remains active, indicating the local web server's operation.
 6. **Access Point**: Await the URL output. First, note down the IP address. Subsequently, click on the provided URL to open a new browser tab. An example output might resemble:
 
-`
+```
 The password/enpoint ip for localtunnel is: 65.197.156.22
 your url is: https://cool-groups-grab.loca.lt
-`
+```
 
 7. **Dive into ComfyUI**: Allow the new tab to load ComfyUI. Patience is key here. A fully-loaded workflow on the screen indicates you're all set.
 
