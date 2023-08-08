@@ -1,6 +1,8 @@
 # SDXL 1.0 and ComfyUI: A Seamless Integration
 
-Welcome to the world of ComfyUI, a paradigm shift in interface design. With its ability to re-execute only the "changed parts" of the workflow, ComfyUI stands out for its efficiency. This is important when conserving GPU time purchased on Colab. After you run out of your introductory GPU units, the $10 purchase of 100 GPU units for 90 days is the best option. 
+Welcome to the world of ComfyUI, a paradigm shift in interface design. With its ability to re-execute only the "changed parts" of the workflow, ComfyUI stands out for its efficiency. This is important when conserving GPU time purchased on Colab. 
+
+After you run out of your introductory GPU units, the $10 purchase of 100 GPU units for 90 days is the best option.  You'll be pleasantly surprised on how far that takes you.
 
 ## Embarking on Your Journey:
 
