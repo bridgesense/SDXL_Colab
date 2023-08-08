@@ -1,139 +1,7 @@
 {
-  "last_node_id": 18,
-  "last_link_id": 29,
+  "last_node_id": 22,
+  "last_link_id": 39,
   "nodes": [
-    {
-      "id": 4,
-      "type": "CLIPTextEncodeSDXL",
-      "pos": [
-        951,
-        322
-      ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 6
-        },
-        {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 3,
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          },
-          "slot_index": 1
-        },
-        {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 4,
-          "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            9
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        0,
-        0,
-        1024,
-        1024,
-        "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly",
-        "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        536,
-        172
-      ],
-      "size": {
-        "0": 387.2728271484375,
-        "1": 102.45455932617188
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            7
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            5,
-            6
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            13
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_base_1.0.safetensors"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
     {
       "id": 3,
       "type": "PrimitiveNode",
@@ -146,7 +14,7 @@
         "1": 136
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -174,7 +42,7 @@
       "title": "Positive Prompt",
       "properties": {},
       "widgets_values": [
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
       ]
     },
     {
@@ -189,7 +57,7 @@
         "1": 136
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -221,121 +89,6 @@
       ]
     },
     {
-      "id": 2,
-      "type": "CLIPTextEncodeSDXL",
-      "pos": [
-        527,
-        318
-      ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        },
-        {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 1,
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          },
-          "slot_index": 1
-        },
-        {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 2,
-          "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            8
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        0,
-        0,
-        1024,
-        1024,
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 7,
-      "type": "EmptyLatentImage",
-      "pos": [
-        525,
-        1041
-      ],
-      "size": {
-        "0": 386.4547119140625,
-        "1": 111.6363754272461
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            10
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        1
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
@@ -347,13 +100,13 @@
         "1": 99.54532623291016
       },
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 12
+          "link": 36
         },
         {
           "name": "vae",
@@ -390,7 +143,7 @@
         "1": 390.1817626953125
       },
       "flags": {},
-      "order": 13,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -417,7 +170,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -478,8 +231,8 @@
         0,
         1024,
         1024,
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
-        "cinematic photo of a woman sitting at a cafe. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -496,7 +249,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -576,7 +329,7 @@
         "1": 102.45455932617188
       },
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -629,7 +382,7 @@
         "1": 367.90826416015625
       },
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -645,72 +398,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 6,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        527,
-        645
-      ],
-      "size": {
-        "0": 389.90924072265625,
-        "1": 340.3636474609375
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 7
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 8
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 9
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 10
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            12,
-            23
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
-      },
-      "widgets_values": [
-        "enable",
-        81099882195007,
-        "randomize",
-        30,
-        15,
-        "euler_ancestral",
-        "normal",
-        0,
-        10000,
-        "disable"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 13,
       "type": "KSamplerAdvanced",
       "pos": [
@@ -722,7 +409,7 @@
         "1": 346.7269592285156
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -744,7 +431,7 @@
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 23
+          "link": 35
         }
       ],
       "outputs": [
@@ -763,7 +450,7 @@
       },
       "widgets_values": [
         "enable",
-        125796421640129,
+        868600592326606,
         "randomize",
         31,
         15,
@@ -777,6 +464,409 @@
       "bgcolor": "#355"
     },
     {
+      "id": 16,
+      "type": "LoadImage",
+      "pos": [
+        61,
+        1563
+      ],
+      "size": {
+        "0": 410,
+        "1": 491
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        527,
+        318
+      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 1,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        0,
+        0,
+        1024,
+        1024,
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles",
+        "cinematic photo of a woman dancing in a green field. 35mm photograph, film, bokeh, professional, masterpiece, 8k, hyperrealism, skin mole, skin freckles"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        951,
+        322
+      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 6
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 4,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        0,
+        0,
+        1024,
+        1024,
+        "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly",
+        "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        536,
+        172
+      ],
+      "size": {
+        "0": 387.2728271484375,
+        "1": 102.45455932617188
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            6
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            13,
+            29
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 18,
+      "type": "VAEEncode",
+      "pos": [
+        534,
+        1041
+      ],
+      "size": {
+        "0": 386,
+        "1": 107
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 19,
+      "type": "KSampler",
+      "pos": [
+        526,
+        648
+      ],
+      "size": {
+        "0": 394,
+        "1": 329
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 33
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 31
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            35,
+            36
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        696195776003146,
+        "randomize",
+        30,
+        15,
+        "euler_ancestral",
+        "normal",
+        0.45
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 17,
+      "type": "Image scale to side",
+      "pos": [
+        534,
+        1687
+      ],
+      "size": [
+        384,
+        130
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image scale to side"
+      },
+      "widgets_values": [
+        1024,
+        "Longest",
+        "nearest-exact",
+        "disabled"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 14,
       "type": "VAEDecode",
       "pos": [
@@ -788,7 +878,7 @@
         "1": 88.1809310913086
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -808,7 +898,7 @@
           "type": "IMAGE",
           "links": [
             25,
-            27
+            37
           ],
           "shape": 3,
           "slot_index": 0
@@ -821,15 +911,15 @@
       "bgcolor": "#355"
     },
     {
-      "id": 16,
+      "id": 20,
       "type": "UpscaleModelLoader",
       "pos": [
-        530,
-        1706
+        957,
+        1797
       ],
       "size": [
-        386,
-        65
+        385,
+        59
       ],
       "flags": {},
       "order": 5,
@@ -839,7 +929,7 @@
           "name": "UPSCALE_MODEL",
           "type": "UPSCALE_MODEL",
           "links": [
-            28
+            38
           ],
           "shape": 3,
           "slot_index": 0
@@ -853,24 +943,24 @@
       ]
     },
     {
-      "id": 18,
+      "id": 22,
       "type": "PreviewImage",
       "pos": [
-        1394,
-        653
+        1387,
+        651
       ],
       "size": [
-        814,
-        1111
+        918,
+        1207
       ],
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 29
+          "link": 39
         }
       ],
       "properties": {
@@ -878,29 +968,29 @@
       }
     },
     {
-      "id": 17,
+      "id": 21,
       "type": "ImageUpscaleWithModel",
       "pos": [
         957,
-        1685
+        1692
       ],
       "size": [
-        388,
-        82
+        389,
+        57
       ],
       "flags": {},
-      "order": 16,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
           "name": "upscale_model",
           "type": "UPSCALE_MODEL",
-          "link": 28
+          "link": 38
         },
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 27
+          "link": 37
         }
       ],
       "outputs": [
@@ -908,7 +998,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            29
+            39
           ],
           "shape": 3,
           "slot_index": 0
@@ -969,52 +1059,12 @@
       "CLIP"
     ],
     [
-      7,
-      1,
-      0,
-      6,
-      0,
-      "MODEL"
-    ],
-    [
-      8,
-      2,
-      0,
-      6,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      9,
-      4,
-      0,
-      6,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      10,
-      7,
-      0,
-      6,
-      3,
-      "LATENT"
-    ],
-    [
       11,
       8,
       0,
       9,
       0,
       "IMAGE"
-    ],
-    [
-      12,
-      6,
-      0,
-      8,
-      0,
-      "LATENT"
     ],
     [
       13,
@@ -1097,14 +1147,6 @@
       "MODEL"
     ],
     [
-      23,
-      6,
-      0,
-      13,
-      3,
-      "LATENT"
-    ],
-    [
       24,
       10,
       2,
@@ -1130,25 +1172,97 @@
     ],
     [
       27,
-      14,
-      0,
-      17,
-      1,
-      "IMAGE"
-    ],
-    [
-      28,
       16,
       0,
       17,
       0,
-      "UPSCALE_MODEL"
+      "IMAGE"
     ],
     [
-      29,
+      28,
       17,
       0,
       18,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      1,
+      2,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      31,
+      2,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      32,
+      4,
+      0,
+      19,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      33,
+      1,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      34,
+      18,
+      0,
+      19,
+      3,
+      "LATENT"
+    ],
+    [
+      35,
+      19,
+      0,
+      13,
+      3,
+      "LATENT"
+    ],
+    [
+      36,
+      19,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      37,
+      14,
+      0,
+      21,
+      1,
+      "IMAGE"
+    ],
+    [
+      38,
+      20,
+      0,
+      21,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      39,
+      21,
+      0,
+      22,
       0,
       "IMAGE"
     ]
