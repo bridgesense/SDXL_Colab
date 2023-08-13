@@ -1,0 +1,910 @@
+{
+  "last_node_id": 38,
+  "last_link_id": 72,
+  "nodes": [
+    {
+      "id": 18,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        35,
+        360
+      ],
+      "size": {
+        "0": 425,
+        "1": 110
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            36
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "polyhedron_v10.safetensors"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ModelMergeSimple",
+      "pos": [
+        541,
+        186
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model1",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "model2",
+          "type": "MODEL",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelMergeSimple"
+      },
+      "widgets_values": [
+        0.4
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        30,
+        540
+      ],
+      "size": {
+        "0": 422.84503173828125,
+        "1": 164.31304931640625
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 41,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            63
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "POSITIVE Prompt",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "LoraLoader",
+      "pos": [
+        536,
+        310
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 40
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "lowRA.safetensors",
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "id": 20,
+      "type": "LoraLoader",
+      "pos": [
+        530,
+        485
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 48
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            50
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            51
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "more_details.safetensors",
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "id": 13,
+      "type": "LoraLoader",
+      "pos": [
+        524,
+        661
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 50
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            52
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            53
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "detail_tweaker.safetensors",
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PreviewImage",
+      "pos": [
+        1232,
+        194
+      ],
+      "size": {
+        "0": 895,
+        "1": 1116
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 66
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 21,
+      "type": "Note",
+      "pos": [
+        892,
+        195
+      ],
+      "size": {
+        "0": 306,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Decrease the 'denoise' value below to get a more faithful rendering."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        42,
+        187
+      ],
+      "size": {
+        "0": 425,
+        "1": 110
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            35
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            12
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            67
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "photon_v1.safetensors"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        20,
+        750
+      ],
+      "size": {
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 42,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            68
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "NEGATIVE Prompt",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 29,
+      "type": "ControlNetApply",
+      "pos": [
+        520,
+        1006
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 98
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 63
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 64
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApply"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "type": "LoraLoader",
+      "pos": [
+        523,
+        833
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 52
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            41,
+            42
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "epi_noiseOfsett.safetensors",
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ControlNetLoader",
+      "pos": [
+        519,
+        1153
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            64
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11u_sd15_tile_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        883,
+        315
+      ],
+      "size": {
+        "0": 315,
+        "1": 590
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 72
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 70
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 69
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 68
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 67
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        2,
+        11501348659401,
+        "randomize",
+        40,
+        7,
+        "dpmpp_2m",
+        "karras",
+        0.25,
+        "Linear",
+        512,
+        768,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        "enable"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        514,
+        1262
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "RealESRGAN_x4plus.pth"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        17,
+        986
+      ],
+      "size": {
+        "0": 419,
+        "1": 333
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65,
+            72
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      12,
+      4,
+      1,
+      12,
+      1,
+      "CLIP"
+    ],
+    [
+      35,
+      4,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      36,
+      18,
+      0,
+      19,
+      1,
+      "MODEL"
+    ],
+    [
+      40,
+      19,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      41,
+      14,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      42,
+      14,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      48,
+      12,
+      0,
+      20,
+      0,
+      "MODEL"
+    ],
+    [
+      49,
+      12,
+      1,
+      20,
+      1,
+      "CLIP"
+    ],
+    [
+      50,
+      20,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      51,
+      20,
+      1,
+      13,
+      1,
+      "CLIP"
+    ],
+    [
+      52,
+      13,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      53,
+      13,
+      1,
+      14,
+      1,
+      "CLIP"
+    ],
+    [
+      63,
+      6,
+      0,
+      29,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      64,
+      30,
+      0,
+      29,
+      1,
+      "CONTROL_NET"
+    ],
+    [
+      65,
+      22,
+      0,
+      29,
+      2,
+      "IMAGE"
+    ],
+    [
+      66,
+      37,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      4,
+      2,
+      37,
+      4,
+      "VAE"
+    ],
+    [
+      68,
+      7,
+      0,
+      37,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      69,
+      29,
+      0,
+      37,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      70,
+      14,
+      0,
+      37,
+      1,
+      "MODEL"
+    ],
+    [
+      71,
+      38,
+      0,
+      37,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      72,
+      22,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

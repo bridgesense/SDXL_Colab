@@ -22,9 +22,8 @@ your url is: https://cool-groups-grab.loca.lt
 
 ## Mastery Over the Workflow:
 
-YouTube is a treasure trove of tutorials on ComfyUI. As I delve deeper into ComfyUI, expect this guide to evolve with added functionalities. The current version incorporates the 'Derfuu Modded Nodes' plugin, essential for the img2img workflow.
+YouTube has a trove of tutorials on ComfyUI. As I delve deeper into ComfyUI, expect this guide to evolve with added functionalities. The current version incorporates the 'Derfuu Modded Nodes' plugin, essential for the img2img workflow.
 
-Kickstart your experience by hitting the "Queue Prompt" button. The initial run might test your patience, but rest assured, subsequent runs are run much faster.
+Kickstart things by hitting the "Queue Prompt" button. The initial run might test your patience, but rest assured, subsequent runs are run much faster.
 
 Eager to explore some sample workflows? Hit 'Clear', followed by 'Load', and choose a workflow that piques your interest. The workflows presented here are tailored for this Colab project, ensuring you don't need additional modules or filters.
-
