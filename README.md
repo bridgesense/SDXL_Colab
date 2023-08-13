@@ -6,7 +6,7 @@ After you run out of your introductory GPU units, the $10 purchase of 100 GPU un
 
 ## Embarking on Your Journey:
 
-1. **Initialization**: Begin by loading `SDXL_1_0_ComfyUI.ipynb` into your Colab environment.
+1. **Initialization**: Begin by loading `ComfyUI.ipynb` into your Colab environment.
 2. **Power Up**: Ensure you're connected to a GPU. It's not optional.
 3. **Setting the Stage**: Execute the 'Environment Setup'. Opting for the Google Drive feature? Your subsequent sessions will be quicker, thanks to the cached code.
 4. **Gathering Resources**: Activate 'Checkpoints'. Depending on your selections, this might take a moment. A static play button signals completion.
